@@ -1,0 +1,28 @@
+/* Spiral hide animation */
+@keyframes hideSpiral {
+    0%   { opacity: 1; }
+    25%  { opacity: 0.5; }
+    50%  { opacity: 0; }
+    75%  { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  .spiral.hidden-during-flip {
+    animation: hideSpiral 1.2s forwards;
+  }
+
+/*---------------------------------*/
+@keyframes scatter {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(var(--x) * 50px), calc(var(--y) * 50px));
+    opacity: 0;
+  }
+}
+
+.scatter-animation {
+  animation: scatter 1.5s forwards;
+}

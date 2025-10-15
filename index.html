@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="h-full bg-[rgb(254,217,240)]" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body class="h-full flex items-center justify-center">
+
+    <!---------------------Journal container------------------------------------>
+    <div class="journal_container relative w-[500px] left-[450px]" style="perspective: 1200px;">
+        <!-- Spiral bind (fixed, does not flip) -->
+        <div class="spiral z-50 absolute top-12 left-[-10px] flex flex-col space-y-2">
+          <div class="dot w-4 h-4 bg-gray-700 rounded-full shadow-[0_2px_4px_rgba(0,0,0,0.5)]"></div>
+        </div>
+      
+        <!-- Journal (flipping part) -->
+
+        <!--Front Page-->
+        <div class="journal_wrapper relative" style="perspective: 1200px;"> 
+          <div id="journal" 
+                class="relative z-50 transition-transform duration-[1500ms] 
+                      container max-w-[500px] h-[550px] my-9 mx-auto p-4 bg-lime-500
+                      bg-[radial-gradient(white_8px,transparent_2px)] 
+                      [background-size:50px_50px]
+                      shadow-[0_0_40px_rgba(27,147,18)] rounded-l-[10px] rounded-r-[30px]"
+                style="transform-origin: left center; transform-style: preserve-3d;">
+      
+            
+            
+            <!-----------------------------------------Heart-------------------------------------->
+            <div class="flex items-center justify-center max-w-[500px] h-[550px] bg-transparent">
+
+                  <div id="heart" class="inline-grid grid-cols-7 gap-1 cursor-pointer select-none">
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 1; --y: -1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 2; --y: -1;"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -1; --y: -2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -2; --y: -1;"></div>
+                    <div class="w-8 h-8"></div>
+                
+                    <div class="w-8 h-8 bg-red-500" style="--x: 0; --y: 1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 1; --y: 1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 2; --y: 1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 3; --y: 1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -3; --y: 1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -2; --y: 1;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -1; --y: 1;"></div>
+                
+                    <div class="w-8 h-8 bg-red-500" style="--x: 1; --y: 2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 2; --y: 2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 3; --y: 2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 4; --y: 2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -4; --y: 2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -3; --y: 2;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -2; --y: 2;"></div>
+                
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 1; --y: 3;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 2; --y: 3;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 3; --y: 3;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -3; --y: 3;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -2; --y: 3;"></div>
+                    <div class="w-8 h-8"></div>
+                
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 1; --y: 4;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 2; --y: 4;"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: -2; --y: 4;"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8"></div>
+                
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8 bg-red-500" style="--x: 0; --y: 5;"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8"></div>
+                    <div class="w-8 h-8"></div>
+                  </div>
+            </div>
+            <!-----------------------------------------Heart-------------------------------------->
+          
+          
+          
+          
+            </div>
+
+          <!--Pages Within-->
+            <!---------------------------------------------------------------------------------->
+            <div id="page1" class="page z-10 absolute inset-0 max-w-[460px] h-[450px] m-12 mx-1 transition-transform duration-[1500ms]"
+                  style="transform-origin: left center; transform-style: preserve-3D">
+            
+                  <!-- FRONT -->
+                  <div class="page-front absolute inset-0 bg-amber-100 border-amber-50/50 
+                  border-4 rounded-r-2xl [backface-visibility:hidden]">
+                        <h1 class="text-xl text-black">Page 1 Front</h1>
+                  </div>
+                  
+                  <!-- BACK -->
+                  <div class="page-back absolute inset-0 bg-green-100 border-green-50/50 
+                  border-4 rounded-r-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                        <h1 class="text-xl text-black">Page 1 Back</h1>
+                  </div>
+            </div>
+            <!---------------------------------------------------------------------------------->
+            <!---------------------------------------------------------------------------------->
+            <div id="page2" class="page z-10 absolute inset-0 max-w-[460px] h-[450px] m-12 mx-1 transition-transform duration-[1500ms]"
+                  style="transform-origin: left center; transform-style: preserve-3D">
+            
+                  <!-- FRONT -->
+                  <div class="page-front absolute inset-0 bg-amber-100 border-amber-50/50 
+                              border-4 rounded-r-2xl [backface-visibility:hidden]">
+                      
+                      <div class="frame absolute top-6 left-6 w-45 h-45 border-cyan-100/50 border-2 bg-amber-500/10 rotate-3">
+                          <img src="" alt="image1" class="w-full h-full object-cover">
+                      </div>
+                      
+                      <div class="frame absolute top-8 right-12 w-45 h-45 border-cyan-100/50 border-2 bg-amber-500/10 -rotate-5">
+                          <img src="" alt="image2" class="w-full h-full object-cover">
+                      </div>
+                      
+                      <div class="frame absolute bottom-6 left-10 w-45 h-45 border-cyan-100/50 border-2 bg-amber-500/10 rotate-7">
+                          <img src="" alt="image3" class="w-full h-full object-cover">
+                      </div>
+                      
+                      <div class="frame absolute bottom-8 right-4 w-45 h-45 border-cyan-100/50 border-2 bg-amber-500/10 -rotate-2">
+                          <img src="" alt="image4" class="w-full h-full object-cover">
+                      </div>
+                      
+                  </div>
+                  
+                  <!-- BACK -->
+                  <div class="page-back absolute inset-0 bg-green-100 border-green-50/50 
+                              border-4 rounded-r-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                  
+                        <div id="cd2" class="draggable-cd cursor-grab absolute justify-center items-center ml-25 mt-25 w-[250px]"
+                              draggable="true" data-cd-filename="falling_in_love.png">
+                            
+                              <img src="./asset/falling_in_love.png" alt="cd2" class="disk">
+                        
+                        </div>
+
+                  </div>
+            </div>
+            <!---------------------------------------------------------------------------------->
+            <!---------------------------------------------------------------------------------->
+            <div id="page3" class="page z-10 absolute inset-0 max-w-[460px] h-[450px] m-12 mx-1 transition-transform duration-[1500ms]"
+                  style="transform-origin: left center; transform-style: preserve-3D">
+            
+                  <!-- FRONT -->
+                  <div class="page-front absolute inset-0 bg-amber-100 border-amber-50/50 
+                  border-4 rounded-r-2xl [backface-visibility:hidden]">
+                  
+                        <div id="pic1" class="frame absolute right-4 mt-30 -rotate-2 w-40 h-40 border-cyan-100/50 border-2 bg-amber-500/10">
+
+                              <img src="" alt="image1" class="">
+
+                        </div>
+                  </div>
+                  
+                  <!-- BACK -->
+                  <div class="page-back absolute inset-0 bg-green-100 border-green-50/50 
+                  border-4 rounded-r-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                        <h1 class="text-xl text-black">Page 3 Back</h1>
+                  </div>
+            </div>
+            <!---------------------------------------------------------------------------------->
+            <!---------------------------------------------------------------------------------->
+            <div id="page4" class="page z-10 absolute inset-0 max-w-[460px] h-[450px] m-12 mx-1 transition-transform duration-[1500ms]"
+                  style="transform-origin: left center; transform-style: preserve-3D">
+            
+                  <!-- FRONT -->
+                  <div class="page-front absolute inset-0 bg-amber-100 border-amber-50/50 
+                  border-4 rounded-r-2xl [backface-visibility:hidden]">
+
+                        <div id="pic1" class="frame absolute ml-8 mt-4 rotate-3 w-50 h-50 border-cyan-100/50 border-2 bg-amber-500/10">
+
+                              <img src="" alt="image1" class="">
+
+                        </div>
+
+                        
+
+                  </div>
+                  
+                  <!-- BACK -->
+                  <div class="page-back absolute inset-0 bg-green-100 border-green-50/50 
+                  border-4 rounded-r-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                        
+                        <div id="cd1" class="draggable-cd cursor-grab absolute justify-center items-center ml-25 mt-25 w-[250px]"
+                        draggable="true" data-cd-filename="creator.png">
+                              
+                              <img src="./asset/creator.png" alt="cd1" class="disk">
+                        
+                        </div>
+                              
+                  </div>
+            </div>
+            <!---------------------------------------------------------------------------------->
+
+
+          <!--Bottom Page-->
+          <div id="bottom" 
+          class="absolute z-[-1] max-w-[500px] h-[550px] 
+                inset-0 transition-transform duration-[1500ms] 
+                container p-4 bg-lime-500
+                bg-[radial-gradient(white_8px,transparent_2px)] 
+                [background-size:50px_50px]
+                shadow-[0_0_40px_rgba(27,147,18)] rounded-l-[10px] rounded-r-[30px]"
+          style="transform-origin: left center; transform-style: preserve-3d;">
+          </div>
+
+          <button id="reset" class="ml-[85%] border-amber-800 p-1 border-2 rounded-[10px] bg-yellow-200/50">Reset</button>
+        </div>
+        
+      </div>
+    <!---------------------Journal container------------------------------------>
+
+
+    <!------------------------------- Gramophone Player ------------------------>
+      <div id="player_body" class="pt-6 rounded-2xl absolute top-25 left-5 w-100 h-[520px] bg-[rgb(249,181,45)] shadow-[0_0_30px_rgba(255,128,234)]">    
+            <div id="gramophone" class="absolute left-10 w-80 h-80 bg-orange-300 rounded-full shadow-[0_0_30px_rgba(255,128,234)]">
+            
+                  <!-- Turntable -->
+                  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[rgb(255,234,0)] shadow-[0_0_60px_rgba(255,234,0)] rounded-full">
+                  <!-- CD Drop Zone -->
+                        <div class="cd-drop-zone absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-68 h-68 rounded-full"
+                              style="background-image: url('./asset/october.png'); background-size: contain; background-repeat: no-repeat;">
+                              
+                        
+                        </div>
+                  </div>
+                  <!----------------------->
+                  <!-- Music Player Controls -->
+                  <div class="music-player absolute -bottom-[130px] left-1/2 transform -translate-x-1/2 w-64 bg-[rgb(255,234,0)]/80 shadow-[0_0_60px_rgba(249,181,45)] rounded-lg p-4">
+                  
+                        <!-- Progress Bar -->
+                        <div class="progress-bar relative w-full h-1 bg-white/30 rounded-full mb-3 cursor-pointer">
+                        <div class="progress-fill absolute h-full bg-white rounded-full" style="width: 30%"></div>
+                        <div class="progress-handle absolute top-1/2 transform -translate-y-1/2 w-3 h-3 bg-white rounded-full cursor-grab" style="left: 30%"></div>
+                        </div>
+                        
+                        <!-- Play/Pause Button -->
+                        <div class="flex justify-center items-center space-x-4">
+                        <button id="playPauseBtn" class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+                              <!-- Play Icon -->
+                              <svg id="playIcon" class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                              </svg>
+                              <!-- Pause Icon (hidden by default) -->
+                              <svg id="pauseIcon" class="w-5 h-5 text-black hidden" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                              </svg>
+                        </button>
+                        </div>
+                        
+                  </div>
+
+            </div>
+      </div>
+
+    <script src="./javascript/scripts.js"></script>
+</body>
+</html>
